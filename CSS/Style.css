@@ -88,28 +88,43 @@ p
 
 
 
-
+.function
+{
+    color: rgb(78, 142, 183);
+}
+.getFunction
+{
+    color: rgb(120, 162, 113)
+}
+.fname
+{
+    color: rgb(169, 108, 210);
+}
 .string
 {
-    color: rgb(225, 3, 245);
+    color: rgba(225, 3, 245, 0.8);
 }
 .object
 {
-    color: rgb(0, 212, 254);
+    color: rgba(0, 212, 254, 0.8);
 }
 .data
 {
     color: rgb(108, 108, 254);
 }
-.error
-{
-    color: brown;
-}
 .event
 {
-    color: rgb(255, 42, 0);
+    color: rgba(255, 42, 0, .8);
 }
-.success
+.delegate
+{
+    color: rgba(255, 56, 56, .8)
+}
+.true
 {
     color: lawngreen;
+}
+.false
+{
+    color: rgb(228, 30, 30);
 }
