@@ -4,8 +4,14 @@ body
     color: aliceblue;
 }
 
+.pagediv
+{
+    word-wrap: break-word;
+}
+
 nav
 {
+    height: 7.5%;
     margin: auto;
     text-align: center;
 }
@@ -63,7 +69,7 @@ div.guideDiv
     border-left: 0.3vw solid rgb(50, 50, 50);
     border-right: 0.3vw solid rgb(50, 50, 50);
     margin-left: 25%;
-    margin-right: 2.5%;
+    margin-right: 0.5%;
     text-align: center;
 }
 
