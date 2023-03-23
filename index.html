@@ -79,9 +79,9 @@
                         <p>Third column name will be "Password" with the datatype of "char(255)"</p>
                         <p>Make them not nullable, The UID Auto increment and "Primary Key"</p>
                         <p>Your table should look like this</p>
-                        <p><a href="/Media/AccountsTable.PNG" target="_blank"><img style="width: 20%;" src="/Media/AccountsTable.PNG" alt="AccountsTable"></a></p>
-                        <p><a href="/Media/AccountsTableDesign.PNG" target="_blank"><img src="/Media/AccountsTableDesign.PNG" alt="AccountsTable Design"></a></p>
-                        <p><a href="/Media/AccountsTableContent.PNG" target="_blank"><img src="/Media/AccountsTableContent.PNG" alt="AccountsTable Content"></a></p>
+                        <p><a href="Media/AccountsTable.png" target="_blank"><img style="width: 20%;" src="/Media/AccountsTable.png" alt="AccountsTable"></a></p>
+                        <p><a href="Media/AccountsTableDesign.png" target="_blank"><img src="/Media/AccountsTableDesign.png" alt="AccountsTable Design"></a></p>
+                        <p><a href="Media/AccountsTableContent.png" target="_blank"><img src="/Media/AccountsTableContent.png" alt="AccountsTable Content"></a></p>
                         
                     </div>
     
@@ -92,7 +92,7 @@
                         <p>ConnectingString <span class="string">"String"</span> </p>
                         <p>DatabaseObject " <span class="object">DatabaseObject</span> "</p>
                         <p>ColumnValues <span class="string">"ArrayOfString"</span></p>
-                        <p><a href="/Media/bpclassvariables.PNG" target="_blank"><img src="/Media/bpclassvariables.PNG" alt="Blueprint class variables"></a></p>
+                        <p><a href="/Media/bpclassvariables.png" target="_blank"><img src="/Media/bpclassvariables.png" alt="Blueprint class variables"></a></p>
                     </div>
     
                     <div id="connectionStringdiv" class="connectionStringdiv">
@@ -101,7 +101,7 @@
                         <p>Populate your <span class="string">ConnectionString</span> variable with your connection string, here are some examples</p>
                         <p>With Windows authentication <span class="data">DRIVER={SQL Server};Server=ServerName;Database=DatabaseName;Trusted_Connection=yes;</span></p>
                         <p>With SQL Server authentication <span class="data">{SQL Server};SERVER=ServerName;DSN=DatabaseName;UID=Username;PWD=Password;</span></p>
-                        <p><a href="/Media/connectionStringValue.PNG" target="_blank"><img src="/Media/connectionStringValue.PNG" alt=""></a></p>
+                        <p><a href="/Media/connectionStringValue.png" target="_blank"><img src="/Media/connectionStringValue.png" alt=""></a></p>
                     </div>
     
                     <div id="gettingDatabaseManagerDiv" class="gettingDatabaseManagerDiv">
@@ -109,7 +109,7 @@
                         <p id="gettingDatabaseManagermp" class="stepmp">Getting DatabaseManager</p>
                         <p>In the blueprint you want to use the plugin right click and type "Get DatabaseManager" and hit Enter </p>
                         <p><a href="/Media/Get DatabaseManager.png" target="_blank"><img src="/Media/Get DatabaseManager.png" alt="Get DatabaseManager"></a></p>
-                        <p><a href="/Media/DatabaseManagerPointer.PNG" target="_blank"><img src="/Media/DatabaseManagerPointer.PNG" alt="DatabaseManager Reference"></a></p>
+                        <p><a href="/Media/DatabaseManagerPointer.png" target="_blank"><img src="/Media/DatabaseManagerPointer.png" alt="DatabaseManager Reference"></a></p>
                     </div>
         
                     <div id="executeStatementFunctionDiv" class="executeStatementFunctionDiv">
@@ -122,7 +122,7 @@
                         <p>Type your statement in <span class="string">Statement String</span> for example <span class="data">SELECT * FROM Accounts;</span></p>
                         <p>Bind a custom event to <span class="event">On Complete</span> pin and name your event <span class="event">OnComplete</span></p>
                         <p>You should have something like this</p>
-                        <p></p><a href="/Media/ExecuteStatementPins.PNG" target="_blank"><img src="/Media/ExecuteStatementPins.PNG" alt="ExecuteStatement pins connected"></a></p>
+                        <p></p><a href="/Media/ExecuteStatementPins.png" target="_blank"><img src="/Media/ExecuteStatementPins.png" alt="ExecuteStatement pins connected"></a></p>
                         <p>You are now ready to query the database, now its time to get the data</p>
                     </div>
         
@@ -132,7 +132,7 @@
                         <p>First we want to handle errors if there are any</p>
                         <p>On the <span class="event">OnComplete</span> event we made Connect the <span class="object">DatabaseObject</span> variable into the <span class="event">OnComplete</span> event <span class="object">DatabaseObject</span> pin</p>
                         <p>Make a Branch on the <span class="error">Success</span> pin and on <span class="error">FALSE</span> add a "Print String" node and connect <span class="string">In String</span> to <span class="string">Error Msg</span> pin on the <span class="event">OnComplete </span> event we made</p>
-                        <p><a href="/Media/OnCompleteError.PNG" target="_blank"><img src="/Media/OnCompleteError.PNG" alt="Custom event call"></a></p>
+                        <p><a href="/Media/OnCompleteError.png" target="_blank"><img src="/Media/OnCompleteError.png" alt="Custom event call"></a></p>
                        
                         <p>Now on <span class="success">TRUE</span></p>
                         <p>Get your <span class="object">DatabaseObject</span> variable, pull the pin and type "GetColumnValuesByColumnName" and hit Enter and connect it to the <span class="success">TRUE</span> pin in the image above</p>
@@ -142,11 +142,11 @@
                         <p>On <span class="string">Return Value</span> of the "GetColumnValuesByColumnName" function set your <span class="string">Column Values</span> variable we made in <a href="#preparingBlueprintDiv"> Here</a></p>
                         <p>After that get the length of your <span class="string">Column Values</span> and make a branch on "Length greater than 0" </p>
                         <p>You should have something like this</p>
-                        <p><a href="/Media/ColumnValues.PNG" target="_blank"><img src="/Media/ColumnValues.PNG" alt="ColumnValues"></a></p>
+                        <p><a href="/Media/ColumnValues.png" target="_blank"><img src="/Media/ColumnValues.png" alt="ColumnValues"></a></p>
                         
                         <p>If you have any rows in the table "Accounts" the <span class="success">TRUE</span> pin will execute, You can do whatever you want with that data!</p>
                         <p>For testing purposes lets print it like this</p>
-                        <p><a href="/Media/PrintColumnValues.PNG" target="_blank"><img src="/Media/PrintColumnValues.PNG" alt="Printing ColumnValues"></a></p>
+                        <p><a href="/Media/PrintColumnValues.png" target="_blank"><img src="/Media/PrintColumnValues.png" alt="Printing ColumnValues"></a></p>
                     </div>
 
                     <div id="gettingAffectedRowsCountDiv" class="gettingAffectedRowsCountDiv">
@@ -154,7 +154,7 @@
                         <p id="gettingAffectedRowsCountmp" class="stepmp">Getting Affected Rows</p>
                         <p>In case you execute statements like "DELETE" or "UPDATE" you might want to get the total count of rows affected</p>
                         <p>To get the affected rows you get the function "GetAffectedRowsCount" instead of "GetColumnValuesByColumnName" <a href="#columnValuesByColumnNameFunction"> Here</a> with your <span class="object">DatabaseObject</span> as a target</p>
-                        <p><a href="/Media/GetAffectedRowsCount.PNG" target="_blank"><img src="/Media/GetAffectedRowsCount.PNG" alt="GetAffectedRowsCount Function"></a></p>
+                        <p><a href="/Media/GetAffectedRowsCount.png" target="_blank"><img src="/Media/GetAffectedRowsCount.png" alt="GetAffectedRowsCount Function"></a></p>
                     </div>
 
                     <div id="statementTagDiv" class="statementTagDiv">
@@ -163,9 +163,9 @@
                         <p>Since the statement execution is MultiThreaded its hard to tell which one will finish first, to overcome that we use "Statement Tag"s</p>
                         <p>In the "ExecuteStatement" function we have a pin named "Statement Tag", you can check the function again <a href="#executeStatementFunction"> Here</a> </p>
                         <p>Lets say you have 2 statements to execute like this, the first one with "StatementTag" "SELECT" and the second one with "StatementTag" "DELETE"</p>
-                        <p><a href="/Media/MultipleStatements.PNG" target="_blank"><img src="/Media/MultipleStatements.PNG" alt="MultipleStatements"></a></p>
+                        <p><a href="/Media/MultipleStatements.png" target="_blank"><img src="/Media/MultipleStatements.png" alt="MultipleStatements"></a></p>
                         <p>To know which one of those 2 statements we are getting on <span class="event">OnComplete</span> event we switch based on the tag</p>
-                        <p><a href="/Media/SwitchingOnStatemnetTag.PNG" target="_blank"><img src="/Media/SwitchingOnStatemnetTag.PNG" alt="Switching On Statemnet Tag"></a></p>
+                        <p><a href="/Media/SwitchingOnStatemnetTag.png" target="_blank"><img src="/Media/SwitchingOnStatemnetTag.png" alt="Switching On Statemnet Tag"></a></p>
                         
                     </div>
         
