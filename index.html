@@ -162,7 +162,7 @@
                         <p id="statementTagmp" class="stepmp">Statement Tag</p>
                         <p>Since the statement execution is MultiThreaded its hard to tell which one will finish first, to overcome that we use "Statement Tag"s</p>
                         <p>In the "ExecuteStatement" function we have a pin named "Statement Tag", you can check the function again <a href="#executeStatementFunction"> Here</a> </p>
-                        <p>Lets say you have 2 statements to execute like this, the first one with "StatementTag" "SELECT" and the second one with "StatementTag" "DELETE"</p>
+                        <p>Lets say you have 2 statements to execute, the first one with SELECT StatementTag and the second one with DELETE StatementTag</p>
                         <p><a href="Media/MultipleStatements.png" target="_blank"><img src="Media/MultipleStatements.png" alt="MultipleStatements"></a></p>
                         <p>To know which one of those 2 statements we are getting on <span class="event">OnComplete</span> event we switch based on the tag</p>
                         <p><a href="Media/SwitchingOnStatemnetTag.png" target="_blank"><img src="Media/SwitchingOnStatemnetTag.png" alt="Switching On Statemnet Tag"></a></p>
