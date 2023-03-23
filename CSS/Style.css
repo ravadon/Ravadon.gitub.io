@@ -1,0 +1,115 @@
+body
+{
+    background-color: rgb(30, 30, 30);
+    color: aliceblue;
+}
+
+nav
+{
+    margin: auto;
+    text-align: center;
+}
+
+
+img
+{
+    scroll-margin-top: 25rem;
+    width: 80%;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    border:  solid rgba(140, 140, 140, .8);
+}
+
+p
+{
+    margin: auto;
+    width: 95%;
+}
+
+hr
+{
+    border-top: 1px solid rgb(70, 70, 70);
+    margin-top: 5%;
+    width: 90%;
+}
+
+.stepmp
+{
+    margin-bottom: 1.5%;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.contentDiv
+{
+    border: 0.3vw solid rgb(50, 50, 50);
+}
+
+.tableofcontent
+{
+    padding-top: 4%;
+    width: 25%;
+    position: fixed;
+}
+.tableofcontent h2
+{
+    padding-right:45%;
+}
+
+
+div.guideDiv
+{
+    padding-top: 4%;
+    border-left: 0.3vw solid rgb(50, 50, 50);
+    border-right: 0.3vw solid rgb(50, 50, 50);
+    margin-left: 25%;
+    margin-right: 2.5%;
+    text-align: center;
+}
+
+div.guideDiv div
+{
+    scroll-margin-top: 7.5rem;
+    margin-top: 3%;
+}
+
+
+h1, h2 
+{
+    color: aliceblue;
+    text-align: center;
+}
+
+p
+{
+    color: aliceblue;
+    text-align: center;
+}
+
+
+
+
+.string
+{
+    color: rgb(225, 3, 245);
+}
+.object
+{
+    color: rgb(0, 212, 254);
+}
+.data
+{
+    color: rgb(108, 108, 254);
+}
+.error
+{
+    color: brown;
+}
+.event
+{
+    color: rgb(255, 42, 0);
+}
+.success
+{
+    color: lawngreen;
+}
