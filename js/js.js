@@ -56,8 +56,8 @@ function OnLoad()
             replace(/Statement Tag/g, "<a href='Media/StatementStringPin.png' target='_blank'><span class='fname'>Statement Tag</span></a>").
             replace(/Success/g, "<a href='Media/OnCompleteEventSuccessPin.png' target='_blank'><span class='bool'>Success</span></a>").
             replace(/Error Msg/g, '<a href="Media/OnCompleteEventErrorMsgPin.png" target="_blank"><span class="string">Error Msg</span></a>').
-            replace(/In String/g, '<a href="Media/PrintStringInStringPin.png" target="_blank"><span class="string">In String</span></a>')
-
+            replace(/In String/g, '<a href="Media/PrintStringInStringPin.png" target="_blank"><span class="string">In String</span></a>').
+            replace(/Column Name/g, '<a href="Media/GetColumnValuesByColumnNameColumnNamePin.png" target="_blank"><span class="string">Column Name</span></a>')
 
             
             allParas[i].innerHTML = result;
