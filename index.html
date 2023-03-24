@@ -26,6 +26,8 @@
             <h2>Table of content</h2>
     
             <ol>
+                <li><a href="#overviewDiv">Overview</a></li>
+                <li><a href="#gettingStartedDiv">Getting Started</a></li>
                 <li><a href="#preparingDatabaseTableDiv">Preparing Database Table</a></li>
                 <li><a href="#preparingBlueprintDiv">Preparing Blueprint</a></li>
                 <li><a href="#connectionStringdiv">Setting ConnectionString</a></li>
@@ -52,20 +54,21 @@
     
             <div>
     
-                <div id="overviewdiv" class="overviewdiv">
+                <div id="overviewDiv" class="overviewDiv">
                     <h2>Overview</h2>
                     <p>ODBC Connect is a plugin for unreal engine that allows the developer to connect to Microsoft SQL Server through ODBC to execute statements on the Database</p> 
                 </div>
+
+                <hr>
             
-                <div id="gettingstarteddiv" class="gettingstarteddiv">
+                <div id="gettingStartedDiv" class="gettingStartedDiv">
                     <h2>Getting started</h2>
                     <p>Before we start make sure you have Microsoft SQL Server installed and ODBC Setup.</p>
+                    <p>You should an entry for your database connection in ODBC like the image below with your database name and information</p>
+                    <p><a href="Media/ODBCDSN.png" target="_blank"><img src="Media/ODBCDSN.png" alt="Media/ODBC System DSN.png"></a></p>
                     <p>In this guide i will be using "Microsoft SQL Server 2014" and "SQL Server Native Client 11.0" ODBC Driver </p>
             
                 </div>
-    
-    
-                <h2>Using ODBC Connect</h2>
     
     
                 <div class="stepsdiv">
@@ -89,26 +92,46 @@
                     <div id="preparingBlueprintDiv" class="preparingBlueprintDiv">
                         <hr>
                         <p id="preparingBlueprintmp" class="stepmp">Preparing your Blueprint</p>
-                        <p class="para">In the blueprint you want to use the plugin make 3 variables</p>
-                        <p class="para">Connection String with the datatype of <span class="string">String</span></p>
-                        <p class="para">DatabaseObject with the datatype of <span class="object">DatabaseObject</span></p>
-                        <p class="para">Column Values with the datatype of <span class="string">ArrayOfString</span></p>
+                        <p class="para">Make 3 new variables in your Blueprint</p>
+                        <table>
+                            <tr>
+                                <th class="name">Variable name</th>
+                                <th class="type">Datatype</th>
+                            </tr>
+
+                            <tr>
+                                <td>ConnectionString</td>
+                                <td><span class="string">String</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>DataObject</td>
+                                <td><span class="object">Object</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>ColumnValues</td>
+                                <td><span class="string">Array of strings</span></td>
+                            </tr>
+                        </table>
                         <p><a href="Media/bpclassvariables.png" target="_blank"><img src="Media/bpclassvariables.png" alt="Blueprint class variables"></a></p>
                     </div>
     
                     <div id="connectionStringdiv" class="connectionStringdiv">
                         <hr>
                         <p id="connectionStringmp" class="stepmp">Set Connection String Value</p>
-                        <p class="para">Populate your Connection String variable with your connection string, here are some examples</p>
+                        <p class="para">Set your Connection String variable with your connection string, here are some examples</p>
                         <p class="para">With Windows authentication <span class="data">DRIVER={SQL Server};Server=ServerName;Database=DatabaseName;Trusted_Connection=yes;</span></p>
                         <p class="para">With SQL Server authentication <span class="data">{SQL Server};SERVER=ServerName;DSN=DatabaseName;UID=Username;PWD=Password;</span></p>
                         <p><a href="Media/connectionStringValue.png" target="_blank"><img src="Media/connectionStringValue.png" alt=""></a></p>
+                        <p class="para"> Change "ServerName, DatabaseName, Username and Password" to your info</p>
+                        <p>For example mine will look like this <span class="data">{SQL Server};SERVER=Astral\SQLEXPRESS;DSN=Astral;UID=MyUsername;PWD=MyPassword;</span></p>
                     </div>
     
                     <div id="gettingDatabaseManagerDiv" class="gettingDatabaseManagerDiv">
                         <hr>
                         <p id="gettingDatabaseManagermp" class="stepmp">Getting DatabaseManager</p>
-                        <p class="para">In the blueprint you want to use the plugin right click and type "Get DatabaseManager" and hit enter </p>
+                        <p class="para">In your blueprint right click in an empty place inside the event graph and type "Get DatabaseManager" and hit enter </p>
                         <p><a href="Media/Get DatabaseManager.png" target="_blank"><img src="Media/Get DatabaseManager.png" alt="Get DatabaseManager"></a></p>
                         <p><a href="Media/DatabaseManagerPointer.png" target="_blank"><img src="Media/DatabaseManagerPointer.png" alt="DatabaseManager Reference"></a></p>
                     </div>
@@ -116,15 +139,16 @@
                     <div id="executeStatementFunctionDiv" class="executeStatementFunctionDiv">
                         <hr>
                         <p id="executeStatementFunctionmp" class="stepmp">ExecuteStatement Function</p>
-                        <p class="para">Pull the pin from DatabaseManager and search for "ExecuteStatement" and hit enter </p>
+                        <p class="para">Pull the pin from DatabaseManager and search for ExecuteStatement and hit enter </p>
                         <p><a href="Media/GetExecuteStatement.png" target="_blank"><img src="Media/GetExecuteStatement.png" alt="GetExecuteStatement"></a></p>
                         <p><a href="Media/ExecuteStatement.png" target="_blank"><img id="executeStatementFunction" src="Media/ExecuteStatement.png" alt="ExecuteStatement function"></a></p>
                         <p class="para">Connect your Connection String variable to Connection String Pin on the function</p>
                         <p class="para">Type your statement in Statement String for example <span class="data">SELECT * FROM Accounts;</span></p>
-                        <p class="para">Bind a custom event to On Complete pin and name your event OnComplete, you can do that by pulling the pin On Complete on the "ExecuteStatement" function and searching for custom event</p>
+                        <p class="para">Bind a custom event to On Complete pin and name your event OnComplete, you can do that by pulling the pin On Complete on the ExecuteStatement function and searching for custom event</p>
                         <p class="para">You should have something like this</p>
                         <p></p><a href="Media/ExecuteStatementPins.png" target="_blank"><img src="Media/ExecuteStatementPins.png" alt="ExecuteStatement pins connected"></a></p>
                         <p class="para">You are now ready to query the database, now its time to get the data</p>
+                        <p>Note: Sometimes when you enter incorrect ConnectionString the ODBC API keeps trying for about 18 seconds then gives up, So if statement execution doesnt succeed and you didnt get an error right away, this is the reason</p>
                     </div>
         
                     <div id="gettingDataDiv" class="gettingDataDiv">
@@ -162,7 +186,6 @@
                         <hr>
                         <p id="statementTagmp" class="stepmp">Statement Tag</p>
                         <p class="para">Since the statement execution is MultiThreaded its hard to tell which one will finish first, to overcome that we use Statement Tags</p>
-                        <p class="para">In the "ExecuteStatement" function we have a pin named Statement Tag</a> </p>
                         <p class="para">Lets say you have 2 statements to execute, the first one with SELECT Statement Tag and the second one with DELETE Statement Tag</p>
                         <p><a href="Media/MultipleStatements.png" target="_blank"><img src="Media/MultipleStatements.png" alt="MultipleStatements"></a></p>
                         <p class="para">To know which one of those 2 statements we are getting on OnComplete event we switch based on the tag</p>

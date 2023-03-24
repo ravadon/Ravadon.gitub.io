@@ -5,6 +5,7 @@ body
     font-family: Arial;
     font-weight: 525;
     font-size: 1vw;
+    font-size: 2vh;
 }
 
 li a
@@ -102,6 +103,35 @@ div.guideDiv div
     scroll-margin-top: 7.5rem;
     margin-top: 3%;
 }
+
+
+
+.preparingBlueprintDiv table, td, th
+{
+    margin: auto;
+    border-collapse: collapse;
+    border: solid rgba(140, 140, 140, .8);
+}
+
+.preparingBlueprintDiv .name
+{
+    padding-top: 0.25vw;
+    padding-bottom: 0.25vw;
+    width: 12.5vw;
+}
+.preparingBlueprintDiv .type
+{
+    padding-top: 0.25vw;
+    padding-bottom: 0.25vw;
+    width: 10vw;
+}
+.preparingBlueprintDiv td
+{
+    padding-top: 0.25vw;
+    padding-bottom: 0.25vw;
+}
+
+
 
 h1
 {
