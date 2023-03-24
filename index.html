@@ -63,8 +63,11 @@
                 <hr>
             
                 <div id="overviewDiv" class="overviewDiv">
+                    <p style="font-weight: bolder; font-size: x-large;">Its recommended to check "More Information" on the left before you follow this guide</p>
                     <h2>Getting started</h2>
-                    <p>Before we start make sure you have Microsoft SQL Server installed and ODBC Setup.</p>
+                    <p>Important: This guide is not meant for absolute beginners, you must have the basics of blueprints in unreal engine and the basics in sql server</p>
+                    <br>
+                    <p>Make sure you have Microsoft SQL Server installed and ODBC Setup.</p>
                     <p>You should have an entry for your database connection in ODBC like the image below with your database name and information</p>
                     <p><a href="Media/ODBCDSN.png" target="_blank"><img src="Media/ODBCDSN.png" alt="Media/ODBC System DSN.png"></a></p>
                     <p>In this guide i will be using "Microsoft SQL Server 2014" and "SQL Server Native Client 11.0" ODBC Driver </p>
@@ -160,6 +163,8 @@
                         <p><a href="Media/connectionStringValue.png" target="_blank"><img src="Media/connectionStringValue.png" alt=""></a></p>
                         <p class="para"> Change "ServerName, DatabaseName, Username and Password" to your info</p>
                         <p>For example mine will look like this <span class="data">{SQL Server};SERVER=Astral\SQLEXPRESS;DSN=Astral;UID=MyUsername;PWD=MyPassword;</span></p>
+                        <br>
+                        <p>Note: Windows authentication worked fine on my computer but i couldnt get it to work on another computer, i suggest you to use SQL Server authentication unless you know what you're doing</p>
                     </div>
     
                     <div id="gettingDatabaseManagerDiv" class="gettingDatabaseManagerDiv">
@@ -235,9 +240,10 @@
                         <p>Supported Development Platforms: [Win64]</p>
                         <p>Supported Target Build Platforms: [Win64]</p>
                         <br>
+                        <p>Testing was done on SQL Server 2014 and 2019 with "SQL Server Native Client 11" driver</p>
+                        <br>
                         <p style="color: red;">Does not support getting messages printed by the SQL Server</p>
                         <br>
-                        <p>Intended use: Add/Delete Rows, Update RowsData and retrieve Rows data</p>
                         <p>If you want to get data using Procedures you need to do SELECT inside the Procedure</p>
                         <br>
                         <br>

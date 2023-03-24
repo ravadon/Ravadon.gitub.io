@@ -4,6 +4,7 @@ body
     color: aliceblue;
     font-family: Arial;
     font-weight: 525;
+    font-size: 1vw;
     font-size: 2vh;
 }
 
@@ -98,6 +99,10 @@ li a
     padding-top: 4%;
     width: 25%;
     position: fixed;
+}
+.tableofcontent li
+{
+    margin-right: 2vw;
 }
 .tableofcontent h2
 {
