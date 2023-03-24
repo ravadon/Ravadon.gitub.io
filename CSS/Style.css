@@ -18,6 +18,8 @@ h1
     margin-top: 0;
     padding-top: 0.75vh;
     padding-bottom: 0.75vh;
+    max-height: 10vh;
+    box-sizing: border-box;
 }
 h1, h2 
 {
@@ -105,6 +107,7 @@ li a
 }
 .tableofcontent h2
 {
+    margin-top: 5vh;
     text-align: left;
     padding-left:1vw;
 }
@@ -114,7 +117,7 @@ div.guideDiv
 {
     float: right;
     width: 70%;
-    padding-top: 4%;
+    padding-top: 5vh;
     border-left: 0.3vw solid rgb(50, 50, 50);
     border-right: 0.3vw solid rgb(50, 50, 50);
     text-align: center;
