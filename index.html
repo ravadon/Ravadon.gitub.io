@@ -45,6 +45,7 @@
                 <li><a href="#gettingDataDiv">Getting Data From Database</a></li>
                 <li><a href="#gettingAffectedRowsCountDiv">Getting Affected Rows Count</a></li>
                 <li><a href="#statementTagDiv">Statement Tag</a></li>
+                <li><a href="#moreInformationDiv">More Information</a></li>
             </ol>
     
         </div>
@@ -63,7 +64,7 @@
                 <div id="gettingStartedDiv" class="gettingStartedDiv">
                     <h2>Getting started</h2>
                     <p>Before we start make sure you have Microsoft SQL Server installed and ODBC Setup.</p>
-                    <p>You should an entry for your database connection in ODBC like the image below with your database name and information</p>
+                    <p>You should have an entry for your database connection in ODBC like the image below with your database name and information</p>
                     <p><a href="Media/ODBCDSN.png" target="_blank"><img src="Media/ODBCDSN.png" alt="Media/ODBC System DSN.png"></a></p>
                     <p>In this guide i will be using "Microsoft SQL Server 2014" and "SQL Server Native Client 11.0" ODBC Driver </p>
             
@@ -102,7 +103,7 @@
                                 <td><span>FALSE</span></td>
                             </tr>
                         </table>
-                        <p class="para">Set the UID Auto increment and "Primary Key"</p>
+                        <p class="para">Set the UID "Auto increment" and "Primary Key"</p>
                         <p><a href="Media/AccountsTable.png" target="_blank"><img style="width: 20%;" src="Media/AccountsTable.png" alt="AccountsTable"></a></p>
                         <p><a href="Media/AccountsTableDesign.png" target="_blank"><img src="Media/AccountsTableDesign.png" alt="AccountsTable Design"></a></p>
                         <p class="para">Add 3 entries to your table</p>
@@ -199,8 +200,9 @@
                         <hr>
                         <p id="gettingAffectedRowsCountmp" class="stepmp">Getting Affected Rows</p>
                         <p class="para">In case you execute statements like "DELETE" or "UPDATE" you might want to get the total count of rows affected</p>
-                        <p class="para">To get the affected rows you get the function GetAffectedRowsCount instead of GetColumnValuesByColumnName <a href="#columnValuesByColumnNameFunction"> Here</a> with your DatabaseObject variable as a target</p>
+                        <p class="para">To get the affected rows count you can use the function GetAffectedRowsCount</p>
                         <p><a href="Media/GetAffectedRowsCount.png" target="_blank"><img src="Media/GetAffectedRowsCount.png" alt="GetAffectedRowsCount Function"></a></p>
+                        <p><a href="Media/GetAffectedRowsCountPrint.png" target="_blank"><img src="Media/GetAffectedRowsCountPrint.png" alt="Printing affected rows count"></a></p>
                     </div>
 
                     <div id="statementTagDiv" class="statementTagDiv">
@@ -211,7 +213,24 @@
                         <p><a href="Media/MultipleStatements.png" target="_blank"><img src="Media/MultipleStatements.png" alt="MultipleStatements"></a></p>
                         <p class="para">To know which one of those 2 statements we are getting on OnComplete event we switch based on the tag</p>
                         <p><a href="Media/SwitchingOnStatemnetTag.png" target="_blank"><img src="Media/SwitchingOnStatemnetTag.png" alt="Switching On Statemnet Tag"></a></p>
+                    </div>
+
+                    <div id="moreInformationDiv" class="moreInformationDiv">
+                        <hr>
+                        <p id="moreInformationmp" class="stepmp">More Information</p>
+                        <p>Version: 1.0</p>
+                        <br>
+                        <p>Supported Development Platforms: [Win64]</p>
+                        <p>Supported Target Build Platforms: [Win64]</p>
+                        <br>
+                        <p style="color: red;">Does not support getting messages printed by the SQL Server</p>
+                        <br>
+                        <p>Intended use: Add/Delete Rows, Update RowsData and retrieve Rows data</p>
                         
+
+                        <br>
+                        <br>
+                        <br>
                     </div>
         
                 </div>
