@@ -27,6 +27,7 @@
             <ol>
                 <li><a href="#overviewDiv">Overview</a></li>
                 <li><a href="#gettingStartedDiv">Getting Started</a></li>
+                <li><a href="#preparingProjectDiv">Preparing Project</a></li>
                 <li><a href="#preparingDatabaseTableDiv">Preparing Database Table</a></li>
                 <li><a href="#preparingBlueprintDiv">Preparing Blueprint</a></li>
                 <li><a href="#connectionStringdiv">Setting ConnectionString</a></li>
@@ -61,7 +62,7 @@
 
                 <hr>
             
-                <div id="gettingStartedDiv" class="gettingStartedDiv">
+                <div id="overviewDiv" class="overviewDiv">
                     <h2>Getting started</h2>
                     <p>Before we start make sure you have Microsoft SQL Server installed and ODBC Setup.</p>
                     <p>You should have an entry for your database connection in ODBC like the image below with your database name and information</p>
@@ -109,6 +110,17 @@
                         <p class="para">Add 3 entries to your table</p>
                         <p><a href="Media/AccountsTableContent.png" target="_blank"><img src="Media/AccountsTableContent.png" alt="AccountsTable Content"></a></p>
                         
+                    </div>
+
+                    <div id="preparingProjectDiv" class="preparingProjectDiv">
+                        <hr>
+                        <p id="preparingProjectmp" class="stepmp">Preparing The Project</p>
+                        <p>Before we start using the plugin we need to enable it after we install it from Unreal Engine Marketplace into our engine</p>
+                        <p>To do that open your project and click "Edit" then "Plugins" in the top left corner</p>
+                        <p><a href="Media/UE5.1Plugins.png" target="_blank"><img src="Media/UE5.1Plugins.png" alt="Opening plugins window"></a></p>
+                        <p>Once you click it a windows will popup for plugins, in the search area type "ODBC Connect", search for the plugin and enable it</p>
+                        <p><a href="Media/UE5.1PluginsWindow.png" target="_blank"><img src="Media/UE5.1PluginsWindow.png" alt="Enabling the plugin"></a></p>
+
                     </div>
     
                     <div id="preparingBlueprintDiv" class="preparingBlueprintDiv">
@@ -177,12 +189,12 @@
                         <hr>
                         <p id="gettingDatamp" class="stepmp">Getting Data From Database</p>
                         <p class="para">First we want to handle errors if there are any</p>
-                        <p class="para">On the OnComplete event we made Connect the DatabaseObject variable into the event DatabaseObject pin</p>
-                        <p class="para">Make a Branch on the Success pin and on FALSE add a Print String node and connect In String to Error Msg pin on the OnComplete event we made</p>
+                        <p class="para">On the OnComplete event we made, Pull the DatabaseObject pin and set your DatabaseObject variable</p>
+                        <p class="para">Make a Branch on the Success pin and on False add a Print String node and connect In String to Error Msg pin on the OnComplete event we made</p>
                         <p><a href="Media/OnCompleteError.png" target="_blank"><img src="Media/OnCompleteError.png" alt="Custom event call"></a></p>
                        
-                        <p class="para">Now on TRUE</p>
-                        <p class="para">Get your DatabaseObject variable, pull the pin and type GetColumnValuesByColumnName and hit enter and connect it to the TRUE pin in the image above</p>
+                        <p class="para">Now on True</p>
+                        <p class="para">Get your DatabaseObject variable, pull the pin and type GetColumnValuesByColumnName and hit enter and connect it to the True pin in the image above</p>
                         <p><a href="Media/ColumnValuesByColumnName.png" target="_blank"><img src="Media/ColumnValuesByColumnName.png" alt="Getting ColumnValuesByColumnName Function"></a></p>
                         <p><a href="Media/ColumnValuesByColumnNameFunction.png" target="_blank"><img id="columnValuesByColumnNameFunction" src="Media/ColumnValuesByColumnNameFunction.png" alt="ColumnValuesByColumnName"></a></p>
                         <p class="para">We will be getting the values in "Password" column in the database so Type Password in GetColumnValuesByColumnName function Column Name pin</p>
@@ -191,8 +203,8 @@
                         <p class="para">You should have something like this</p>
                         <p><a href="Media/ColumnValues.png" target="_blank"><img src="Media/ColumnValues.png" alt="ColumnValues"></a></p>
                         
-                        <p class="para">If you have any rows in the table "Accounts" the TRUE pin will execute, You can do whatever you want with that data!</p>
-                        <p class="para">For testing purposes lets print it like this</p>
+                        <p class="para">If you have any rows in the table "Accounts" the True pin in the image above will execute, You can do whatever you want with that data!</p>
+                        <p class="para">For testing purposes lets print results like this</p>
                         <p><a href="Media/PrintColumnValues.png" target="_blank"><img src="Media/PrintColumnValues.png" alt="Printing ColumnValues"></a></p>
                     </div>
 
@@ -228,7 +240,8 @@
                         <p>Intended use: Add/Delete Rows, Update RowsData and retrieve Rows data</p>
                         <p>If you want to get data using Procedures you need to do SELECT inside the Procedure</p>
                         
-
+                        <a href='Media/OnCompleteEventSuccessPin.png' target='_blank'><span class='bool'>Success</span></a>
+                        
                         <br>
                         <br>
                         <br>

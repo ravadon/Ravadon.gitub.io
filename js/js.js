@@ -53,13 +53,11 @@ function OnLoad()
             replace(/GetAffectedRowsCount/g, "<a href='Media/GetAffectedRowsCountRaw.png' target='_blank'><span class='getFunction'>GetAffectedRowsCount</span></a>").
             replace(/GetColumnValuesByColumnName/g, "<a href='Media/GetColumnValuesByColumnName.png' target='_blank'><span class='function'>GetColumnValuesByColumnName</span></a>").
             replace(/Print String node/g, "<a href='Media/PrintStringNode.png' target='_blank'><span class='function'>Print String</span></a> node").
-             
             replace(/Statement Tag/g, "<a href='Media/StatementStringPin.png' target='_blank'><span class='fname'>Statement Tag</span></a>").
-            replace(/TRUE/g, "<span class='true'>TRUE</span>").
-            replace(/FALSE/g, "<span class='false'>FALSE</span>")
-            
+            replace(/Success/g, "<a href='Media/OnCompleteEventSuccessPin.png' target='_blank'><span class='bool'>Success</span></a>").
+            replace(/Error Msg/g, '<a href="Media/OnCompleteEventErrorMsgPin.png" target="_blank"><span class="string">Error Msg</span></a>').
+            replace(/In String/g, '<a href="Media/PrintStringInStringPin.png" target="_blank"><span class="string">In String</span></a>')
 
-            
 
             
             allParas[i].innerHTML = result;

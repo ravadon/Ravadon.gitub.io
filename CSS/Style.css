@@ -55,6 +55,7 @@ a:hover{ text-decoration: solid;}
 
 img
 {
+    opacity: 0.8;
     scroll-margin-top: 25rem;
     width: 80%;
     margin-top: 0.5%;
@@ -188,6 +189,10 @@ p
 .object
 {
     color: rgba(0, 212, 254, 0.8);
+}
+.bool
+{
+    color: rgb(123, 6, 6);
 }
 .data
 {
