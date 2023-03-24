@@ -52,13 +52,6 @@ a:hover{ text-decoration: solid;}
     word-wrap: break-word;
 }
 
-nav
-{
-    height: 7.5%;
-    margin: auto;
-    text-align: center;
-}
-
 
 img
 {
@@ -116,7 +109,7 @@ li a
 div.guideDiv
 {
     float: right;
-    width: 70%;
+    width: 75%;
     padding-top: 5vh;
     border-left: 0.3vw solid rgb(50, 50, 50);
     border-right: 0.3vw solid rgb(50, 50, 50);
